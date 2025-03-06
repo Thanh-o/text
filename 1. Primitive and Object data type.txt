@@ -1,0 +1,44 @@
+1. Primitive and Object data type
+- Phân biệt kiểu dữ liệu nguyên thủy và kiểu dữ liệu object.
+Kiểu nguyên thủy là immutable, được lưu theo giá trị, so sánh theo giá trị.
+Kiểu object là mutable, được lưu theo tham chiếu, so sánh theo tham chiếu.
+
+- Có thể chuyển đổi giữa hai kiểu dữ liệu này không ?
+Có thể chuyển đổi giữa hai kiểu dữ liệu này bằng wrapper objects (Number, String, v.v.)
+
+- Có thể so sánh hai kiểu dữ liệu này với nhau không?
+So sánh giữa kiểu nguyên thủy và object có thể cho kết quả bất ngờ do JavaScript thực hiện chuyển đổi ngầm.
+
+- Giá trị khi khởi tạo biến với hai loại kiểu dữ liệu này là gì?
+ Kiểu nguyên thủy:
+Khi khởi tạo, biến chứa trực tiếp giá trị của nó.
+Nếu không gán giá trị, mặc định là undefined.
+ Kiểu object:
+Khi khởi tạo, biến lưu tham chiếu đến vùng nhớ chứa dữ liệu.
+Nếu khai báo mà không khởi tạo, biến có giá trị undefined.
+
+2. String
+- Tìm hiểu về các đặc điểm và tính chất của String trong java
+Bất biến (Immutable): Một đối tượng String sau khi được tạo ra không thể thay đổi nội dung của nó. Khi thực hiện thao tác thay đổi, Java tạo một đối tượng String mới.
+Là một đối tượng nhưng có thể được sử dụng như kiểu nguyên thủy: Java cung cấp cú pháp đặc biệt để tạo String mà không cần dùng từ khóa new.
+Hỗ trợ String Pool: Java tối ưu hóa bộ nhớ bằng cách lưu trữ các chuỗi trong một vùng nhớ đặc biệt gọi là String Pool.
+Được Java hỗ trợ nhiều phương thức mạnh mẽ: Các phương thức như length(), substring(), equals(), compareTo(), toUpperCase(), toLowerCase(), trim(), v.v.
+Là một CharSequence: String thực thi giao diện CharSequence, giúp sử dụng trong nhiều API xử lý chuỗi.
+
+- Có bao nhiêu cách để tạo 1 biến String
+Có hai cách chính để tạo một chuỗi String:
+Dùng String Literal
+Dùng từ khóa new
+
+- Tìm hiểu về String pool?
+String Pool là một vùng nhớ đặc biệt trong bộ nhớ Heap, nơi Java lưu trữ các đối tượng String được tạo bằng cách sử dụng String Literal.
+Java cung cấp phương thức intern() để đưa chuỗi từ Heap vào Pool:
+String s4 = s3.intern(); 
+System.out.println(s1 == s4); 
+
+- Làm sao để so sánh hai chuỗi trong java
+Có 4 cách phổ biến để so sánh hai chuỗi:
+Dùng equals() để so sánh nội dung chuỗi
+Dùng equalsIgnoreCase() để bỏ qua phân biệt chữ hoa/thường
+Dùng toán tử == để so sánh tham chiếu bộ nhớ
+Dùng compareTo() để so sánh thứ tự từ điển (lexicographical order)
